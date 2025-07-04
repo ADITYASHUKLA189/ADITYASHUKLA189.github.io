@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white scroll-smooth">
+
+  <!-- Navbar -->
+  <header class="bg-gray-800 fixed w-full z-50 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      <div class="text-xl font-bold text-primary">Aditya Shukla</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-primary">Home</a>
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#projects" class="hover:text-primary">Projects</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-white focus:outline-none">☰</button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <a href="#home" class="block py-2">Home</a>
+      <a href="#about" class="block py-2">About</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Aditya Shukla</h1>
+    <p class="text-xl md:text-2xl text-gray-400 max-w-xl">A passionate developer/designer building beautiful, functional web experiences.</p>
+    <a href="#projects" class="mt-8 inline-block bg-primary hover:bg-indigo-600 text-white px-6 py-3 rounded-full transition">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-800 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">About Me</h2>
+      <p class="text-gray-400">My name is Aditya Shukla, an aspiring software developer from India, learning Web-Development, DSA and have a keen interest in Competative Programming</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold text-center mb-12">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Project Card -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2">Project One</h3>
+          <p class="text-gray-400 mb-4">A blogspot website</p>
+          <a href="webpage1.html" class="text-primary hover:underline">View</a>
+        </div>
+        <!-- More projects -->
+        <!-- <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-xl transition">
+          <h3 class="text-xl font-bold mb-2">Project Two</h3>
+          <p class="text-gray-400 mb-4">Another description about a different project.</p>
+          <a href="#" class="text-primary hover:underline">View on GitHub</a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800 px-6">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-6">Contact Me</h2>
+      <p class="text-gray-400 mb-6">Feel free to reach out if you're interested in working together or have a question.</p>
+      <a href="mailto:your@email.com" class="bg-primary px-6 py-3 rounded-full text-white hover:bg-indigo-600 transition">Email Me</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center py-6 text-gray-500">
+    © 2025 Aditya Shukla. All rights reserved.
+  </footer>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
