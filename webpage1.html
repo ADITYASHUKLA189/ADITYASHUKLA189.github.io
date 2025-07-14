@@ -1,485 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body{
-            width: 100%;
-            height: 100%;
-        }
-        .container{
-            width: 70vw;
-            padding: 2rem 1rem;
-            margin: 0 auto;
-            /* background-color: aqua; */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name | Portfolio</title>
+  <style>
+    :root {
+      --primary: #1e90ff;
+      --accent: #ffe082;
+      --bg: #10131a;
+      --text: #f9f9f9;
+      --card-bg: #181c25;
+      --shadow: 0 6px 24px rgba(30,144,255,0.12);
+      --transition: 0.3s cubic-bezier(.4,2,.6,1);
+    }
 
-        a{
-            text-decoration: none;
-        }
-        
-        .header_container{
-            margin-bottom: 2.8rem;
-        }
+    html, body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+    }
 
-        .header_title{
-             /* text-align: center; */
-             justify-self: center;
-             line-height: 2rem;
-             margin-bottom: 1rem;
-             font-weight: 700;
-             color: white;
-        }
+    header {
+      background: linear-gradient(120deg, #1e90ff 0%, #00bfff 100%);
+      color: #fff;
+      padding-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
 
-        .header_para{
-            max-width: 568px;
-            text-align: center; 
-            /* justify-self: center; */
-            margin: 0 auto;
-            color: white;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 10vw;
+      flex-wrap: wrap;
+    }
 
-        .main_container{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            /* grid-template-rows: repeat(2,1ref) ; */
-            gap: 1rem;
-        }
+    .logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
 
-        @media (min-width:735px){
-            .main_container{
-                grid-template-columns: repeat(2,1fr);
-            }
-        }
-        @media (min-width:1080px){
-            .main_container{
-                grid-template-columns: repeat(3,1fr);
-            }
-        }
-        
-        @media (min-width:1340px){
-            .main_container{
-                grid-template-columns: repeat(4,1fr);
-            }
-        }
-        @media (max-width:740px){
-            .main_container{
-                grid-template-columns: repeat(1,1fr);
-            }
-        }
-        
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
 
-        .card_container{
-            display: flex;
-            flex-direction: column;
-            overflow: auto;
-            border: 2px solid rgb(227, 225, 225);
-            border-radius: 10px;
-        }
+    nav ul li a, #toggle-theme {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color var(--transition);
+    }
 
-        .card_image_container{
-            overflow: hidden;
-            position: relative;
-            height: 14rem;
-        }
+    nav ul li a:hover, #toggle-theme:hover {
+      color: var(--accent);
+    }
 
-        .card_image{
-            position: absolute;
-            object-fit: cover;
-            object-position: center;
-            height: 100%;
-            width: 100%;
+    .hero {
+      text-align: center;
+      margin-top: 56px;
+      padding: 0 5vw;
+    }
 
-        }
+    .gradient-text {
+      background: linear-gradient(90deg, #ffe082, #1e90ff, #00bfff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      font-size: clamp(2rem, 8vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1.1;
+    }
 
-        .author_avatar{
-            height:40px;
-            width: 35px;
-            border: 1px solid rgb(183, 181, 181);
-            border-radius: 100px;
-        }
+    .subtitle {
+      font-size: 1.4rem;
+      margin: 18px 0 28px 0;
+    }
 
-        .title_container{
-            display: flex;
-            flex-direction: column;
-            padding: 1.5rem;
-        }
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+    }
 
-        .card_container .card_image:hover{
-            transform: scale(1.1);
-            transition-duration: 0.2s;
-        }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 14px 38px;
+      border-radius: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(255,224,130,0.16);
+      transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+      border: none;
+      cursor: pointer;
+    }
 
+    .btn:hover {
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 8px 32px rgba(30,144,255,0.14);
+    }
 
+    main {
+      padding: 0 10vw;
+    }
 
-        .card_title{
-            margin-bottom: 0.3rem;
-            color: white;
-        }
+    section {
+      margin: 64px 0;
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 48px 32px;
+      transition: background var(--transition);
+    }
 
-        .anchor:hover .card_title{
-            color: white;
-        }
+    section h2 {
+      font-size: 2.1rem;
+      margin-bottom: 32px;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
 
-        .card_desc{
-            color: white;
-            font-weight: 500;
-            font-size: 1rem;
-        }
-        .card_footer_container{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            align-items: flex-end;
-        }
+    .bento-grid .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
 
-        .card_tag_container{
-            border: 1px solid white;
-            border-radius: 5px;
-            height: 30px;
-            width: 100px;
-            margin-right: 10px;   
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .project-card {
+      background: #161a23;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(30,144,255,0.10);
+      padding: 32px 24px;
+      transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      will-change: transform;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
-        .author_container{
-            display: flex;
-            margin-left: 20px;
-            font-size: 12px;
-        }
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.04) rotate(-1deg);
+      box-shadow: 0 8px 32px rgba(30,144,255,0.18);
+    }
 
-        .author_info{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 5px;
-            align-items: center;
-            color: white;
-        }
+    .project-img {
+      width: 100%;
+      height: 120px;
+      background: linear-gradient(135deg, #1e90ff 60%, #ffe082 100%);
+      border-radius: 10px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px rgba(30,144,255,0.10);
+    }
 
-        .card_tag{
-            display: flex;
-            justify-content: center;
-            align-items: center;  
-            color: white;        
-        }
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
 
+    .project-card p {
+      flex-grow: 1;
+    }
 
-    </style>
+    .project-card a {
+      color: var(--primary);
+      text-decoration: underline;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    input, textarea {
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 1rem;
+      background: #23263a;
+      color: var(--text);
+      resize: none;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 0;
+      background: #181c25;
+      color: #fff;
+      border-radius: 0 0 18px 18px;
+      margin-top: 48px;
+      font-size: 1rem;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Dark/Light Theme Toggle */
+    body.light {
+      --bg: #f9f9f9;
+      --text: #10131a;
+      --card-bg: #fff;
+      --shadow: 0 6px 24px rgba(30,144,255,0.06);
+    }
+
+    body.light header {
+      color: #10131a;
+    }
+
+    body.light .logo {
+      color: var(--primary);
+    }
+
+    body.light .project-card {
+      background: #f1f8ff;
+    }
+
+    body.light footer {
+      background: #e3f2fd;
+      color: #10131a;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1100px) {
+      nav {
+        padding: 18px 4vw;
+      }
+      main {
+        padding: 0 4vw;
+      }
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 4vw;
+      }
+      .hero {
+        margin-top: 36px;
+      }
+      section {
+        padding: 32px 10px;
+      }
+      .bento-grid .projects-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 1.3rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: flex-start;
+      }
+      .hero h1 {
+        font-size: 1.3rem;
+      }
+      .hero {
+        padding: 0 2vw;
+      }
+      section {
+        margin: 24px 0;
+        padding: 14px 2px;
+      }
+      .project-card {
+        padding: 12px 4px;
+      }
+    }
+  </style>
 </head>
-<body 
-     style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');
-        background-repeat: no-repeat;background-size: cover;"
->   
+<body>
+  <header>
+    <nav>
+      <div class="logo">Aditya Shukla</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="toggle-theme" aria-label="Toggle dark mode">🌙</button>
+        </li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>
+        <span style="color: rgb(120, 101, 101) !important;">Hi, I'm Aditya Shukla</span>
 
-     <div class="container">
-
-        <div class="header_container">
-            <h1 class="header_title">Aditya Shukla Blogs</h1>
-            <p class="header_para">Lorem ipsum dolor,hello this side aditya shukla. sit amet consectetur adipisicing elit.  ratione libero.</p>
-        </div>
-    
-
-    <main class="main_container">
-        <!-- card 1 start -->
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <!-- card 1 end   -->
-         <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        <div class="card_container">
-            <a href="#" class="card_image_container">
-                <img class="card_image" src="https://picsum.photos/300/300?random=1" alt="randomimage" loading="lazy" >
-            </a>
-
-            <div class="title_container">
-               <a href="#" class="anchor"><h3 class="card_title">New Gadgets Released</h3></a> 
-                <p class="card_desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, maxime!</p>
-            </div>
-
-            <footer class="card_footer_container">
-                   <div class="author_container">
-                          
-                       <div class="authod_avatar_container">
-                              <img  class="author_avatar"  loading="lazy" src="https://api.dicebear.com/9.x/croodles/svg" alt="avatar"/>
-                       </div>
-
-                       <div class="author_info">
-                               <span>
-                                       John Doe
-                               </span>
-                               <span>
-                                       sept 19,2021
-                               </span>
-                       </div>
-
-                   </div>
-                    
-                   <div class="card_tag_container">
-                         <span class="card_tag">Technology</span>
-                   </div>
-
-            </footer>
-
-        </div>
-        
-    </main>
-
+      </h1>
+      <p class="subtitle">Crafting <span class="highlight">unexpected</span> digital experiences.</p>
+      <a href="#projects" class="btn">See My Work</a>
     </div>
+  </header>
 
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>
+        I blend technology, art, and empathy to design interfaces that surprise and delight. My work is driven by curiosity and a passion for next-gen user experiences.
+      </p>
+    </section>
 
-    
+    <section id="projects" class="bento-grid">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card tilt">
+          <div class="project-img"></div>
+          <h3>Project One</h3>
+          <p>Immersive 3D dashboard for real-time data visualization.</p>
+          <a href="#">View on GitHub</a>
+        </div>
+        <div class="project-card tilt">
+          <div class="project-img"></div>
+          <h3>Project Two</h3>
+          <p>AI-powered portfolio generator with custom themes.</p>
+          <a href="#">View on GitHub</a>
+        </div>
+        <div class="project-card tilt">
+          <div class="project-img"></div>
+          <h3>Project Three</h3>
+          <p>Animated storytelling site with scroll-triggered effects.</p>
+          <a href="#">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <p>Or email me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Aditya Shukla. All rights reserved.</p>
+  </footer>
+  <script>
+    // Dark/Light Theme Toggle
+    const toggleBtn = document.getElementById('toggle-theme');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      toggleBtn.textContent = document.body.classList.contains('light') ? '🌞' : '🌙';
+    });
+
+    // Simple fade-in animation for sections
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.opacity = 1;
+      });
+    });
+
+    // 3D tilt effect for project cards
+    document.querySelectorAll('.tilt').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.transform = `perspective(600px) rotateY(${(x/rect.width-0.5)*10}deg) rotateX(${(0.5-y/rect.height)*10}deg) scale(1.04)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
 </body>
 </html>
