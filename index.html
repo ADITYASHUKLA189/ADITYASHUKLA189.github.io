@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+  <div class="navcontainer px-4">
+    <nav class="navbar navbar-expand-lg   fixed-top" id="navbar">
+    <div class="container-fluid">
+       <img class="navbar-brand img-fluid"  id="navimg" src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+     
+    <!-- right side of the navebar -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"> <!-- Right side items -->
+              <li class="nav-item">
+            <a class="nav-link active fw-bold text-dark" aria-current="page" id="home" href="#">Home</a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link fw-bold text-dark" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark" href="#blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold text-dark" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <section id="home_page" class="bg-image">
+    <div  class="home_content">
+       <h6 style="color: red;">WINTER COLLECTION</h6>
+       <h6 style="color: red;">By Aditya Shukla.</h6>
+
+
+       <h3 class="heading"></h3>
+
+
+      <div class="home_label mb-4 ">
+          <p>A specialist label creating luxury essentials. Ethically crafted<br>with an unwavering commitment to exceptional quality.</p>
+      </div>
+
+      <a class="btn btn-primary" style="border-radius: 10px;" href="#shop">SHOP NOW! →</a>
+      <div class="home_social_icons mt-4">
+        <a href="https://www.instagram.com/adityashukla5049?utm_source=qr&igsh=ZzlreGplYTV0cjJ6"><i class='bx bxl-facebook'></i></a>
+        <a href="https://www.instagram.com/adityashukla5049?utm_source=qr&igsh=ZzlreGplYTV0cjJ6"><i class='bx bxl-twitter'></i></a>
+        <a href="https://www.instagram.com/adityashukla5049?utm_source=qr&igsh=ZzlreGplYTV0cjJ6"><i class='bx bxl-instagram'></i></a>
+      </div>
+     </div>
+  </section>
+
+
+
+  <!-- clothing collection -->
+   <section  class="collection" >
+       <div class="container text-centre">
+         <div class="row">
+           <div class="col">
+                 <div class="card" style="width: 18rem;">
+                  <img class="img" src="https://imgs.search.brave.com/34D-iGFDOYWjKNmipMxN728fIF3_nF4bnOkovEhbwLk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL2htZy1wcm9k/L2ltYWdlcy9taGwt/bWVucy1jbG90aC1o/dWNrYmVycnktNzQ5/LTY3YzFkZWQ1MzM2/MzcuanBnP2Nyb3A9/MC4yMTN4dzowLjQy/NnhoOzAuNDAyeHcs/MC4xMzV4aCZyZXNp/emU9MzYwOio" alt="">
+                  <div class="overlay">
+                       <h4 style="color: white;">Clothing<br>Collections</h4>
+                       <button class="btn" style="background-color: rgb(131, 125, 127); border-radius: 10px; width: 120px;">SHOP NOW!</button>
+                  </div>
+                 </div>
+            </div>
+
+           <div class="col">
+                 <div class="card" style="width: 18rem;">
+                  <img class="img" src="https://imgs.search.brave.com/jUCBrINwHIwUzzeMMfAx7hktAd7kYdciF38NxVUztiw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzhkLzI2/LzhlLzhkMjY4ZTYz/MWJmYTBhYWQ3NWM0/MmU3OWMzODVjNmVh/LmpwZw" alt="">
+                  <div class="overlay">
+                       <h4 style="color: white;">Shoes<br>Spring</h4>
+                       <button class="btn" style="background-color: rgb(123, 122, 122); border-radius: 10px; width: 120px;" >SHOP NOW!</button>
+                  </div>
+                 </div>
+            </div>
+
+           <div class="col">
+                 <div class="card" style="width: 18rem;">
+                  <img class="img" src="https://imgs.search.brave.com/FZ_tCj-RCAvwjNXcJ2F0TXL0iII4gpBIRO75Om5YDPE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9mbGF0LWxheS1n/b2xkLWFjY2Vzc29y/aWVzLWJlYXV0eS1w/cm9kdWN0cy13aXRo/LWZsb3dlcnMtd2hp/dGUtYmFja2dyb3Vu/ZF8xNDExNy0xMTE0/Mjc4LmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDA" alt="">
+                  <div class="overlay">
+                       <h4 style="color: white;">Accessories</h4>
+                       <button  class="btn" style="background-color: rgb(134, 131, 132); border-radius: 10px; width: 120px;" >SHOP NOW!</button>
+                  </div>
+                 </div>
+            </div>
+
+          
+          
+         </div>
+       </div>
+
+   </section>
+
+
+
+
+
+  <!-- shop section -->
+  <section class="shop" id="shop">
+      <h3>TOP SALES</h3>
+      <div class="container text-centre">
+        <div class="row">
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/61U7keIMPHL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Cole Haan</h5>
+                    <p class="card-text">Men's 5.Zerogrand Wing Oxfords.</p>
+                   
+                    <h5>Price:	$185.80 - $211.50</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Cole-Haan-5-Zerogrand-Oxford-Pavement/dp/B09SKLHZMP/ref=lp_205735617011_1_5" class="btn btn-primary">BUY NOW!</a>
+                    
+                 </div>
+               </div>
+          </div>
+
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71E5CR3DnNL._AC_UL480_QL65_.jpg"  class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">AllSaints</h5>
+                    <p class="card-text">Men's Norton Leather Blazer</p>
+
+                    <h5>Price:	$454.53 - $704.06</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/AllSaints-Norton-Leather-Blazer-Carter/dp/B0D3NBMMV8/ref=lp_205735617011_1_4" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/81Meq2jbhsL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">John Varvatos</h5>
+                    <p class="card-text">John Varvatos Men's Ross Shirt.</p>
+                    <h5>Price:	$105.00 - $214.32</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/John-Varvatos-Mens-Ross-Shirt/dp/B0DJN67FQ7/ref=lp_205735617011_1_6" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71oGe471SlL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                  
+                    <h5 class="card-title">Stacy Adams</h5>
+                    <p class="card-text">Men's Embrey Moc Toe Driver Loafer.</p>
+                    <h5>Price:	$51.00 - $56.00</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Stacy-Embrey-Driver-Loafer-Cognac/dp/B0DG9R9VL7/ref=lp_205735617011_1_8" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+
+
+
+
+        </div>
+  </section>
+   
+
+  <!-- New arrivel -->
+   <section class="shop">
+      <h3>New Arrivals</h3>
+      <div class="container text-centre">
+        <div class="row">
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/61U7keIMPHL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Cole Haan</h5>
+                    <p class="card-text">Men's 5.Zerogrand Wing Oxfords.</p>
+                   
+                    <h5>Price:	$185.80 - $211.50</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Cole-Haan-5-Zerogrand-Oxford-Pavement/dp/B09SKLHZMP/ref=lp_205735617011_1_5" class="btn btn-primary">BUY NOW!</a>
+                    
+                 </div>
+               </div>
+          </div>
+
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71E5CR3DnNL._AC_UL480_QL65_.jpg"  class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">AllSaints</h5>
+                    <p class="card-text">Men's Norton Leather Blazer</p>
+
+                    <h5>Price:	$454.53 - $704.06</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/AllSaints-Norton-Leather-Blazer-Carter/dp/B0D3NBMMV8/ref=lp_205735617011_1_4" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/81Meq2jbhsL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">John Varvatos</h5>
+                    <p class="card-text">John Varvatos Men's Ross Shirt.</p>
+                    <h5>Price:	$105.00 - $214.32</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/John-Varvatos-Mens-Ross-Shirt/dp/B0DJN67FQ7/ref=lp_205735617011_1_6" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71oGe471SlL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                  
+                    <h5 class="card-title">Stacy Adams</h5>
+                    <p class="card-text">Men's Embrey Moc Toe Driver Loafer.</p>
+                    <h5>Price:	$51.00 - $56.00</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Stacy-Embrey-Driver-Loafer-Cognac/dp/B0DG9R9VL7/ref=lp_205735617011_1_8" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+
+
+
+
+        </div>
+  </section>
+
+
+  <!-- Hot Sales -->
+  <section class="shop">
+      <h3>Hot Sales</h3>
+      <div class="container text-centre">
+        <div class="row">
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="https://m.media-amazon.com/images/I/61U7keIMPHL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">Cole Haan</h5>
+                    <p class="card-text">Men's 5.Zerogrand Wing Oxfords.</p>
+                   
+                    <h5>Price:	$185.80 - $211.50</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Cole-Haan-5-Zerogrand-Oxford-Pavement/dp/B09SKLHZMP/ref=lp_205735617011_1_5" class="btn btn-primary">BUY NOW!</a>
+                    
+                 </div>
+               </div>
+          </div>
+
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71E5CR3DnNL._AC_UL480_QL65_.jpg"  class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">AllSaints</h5>
+                    <p class="card-text">Men's Norton Leather Blazer</p>
+
+                    <h5>Price:	$454.53 - $704.06</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/AllSaints-Norton-Leather-Blazer-Carter/dp/B0D3NBMMV8/ref=lp_205735617011_1_4" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/81Meq2jbhsL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                    <h5 class="card-title">John Varvatos</h5>
+                    <p class="card-text">John Varvatos Men's Ross Shirt.</p>
+                    <h5>Price:	$105.00 - $214.32</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/John-Varvatos-Mens-Ross-Shirt/dp/B0DJN67FQ7/ref=lp_205735617011_1_6" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+          <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top img-fluid fixed-img" src="https://m.media-amazon.com/images/I/71oGe471SlL._AC_UL480_QL65_.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                  
+                    <h5 class="card-title">Stacy Adams</h5>
+                    <p class="card-text">Men's Embrey Moc Toe Driver Loafer.</p>
+                    <h5>Price:	$51.00 - $56.00</h5>
+                    
+                    <a style="border-radius: 10px;" href="https://www.amazon.com/Stacy-Embrey-Driver-Loafer-Cognac/dp/B0DG9R9VL7/ref=lp_205735617011_1_8" class="btn btn-primary">BUY NOW!</a>
+                 </div>
+               </div>
+          </div>
+
+
+
+
+        </div>
+  </section>
+
+
+  <!-- blog -->
+   <section class=" d-flex align-item-centre justify-content-center " id="blog">
+         <div class="content text-centre">
+             <div class="row">
+                <div style="margin-left: 65px;" class="col"><h4 style="color: red;"> LATEST NEWS</h4></div>
+            </div>
+             <div class="row">
+                 <div class="col"><h2>Fashion New Trends</h2></div>
+            </div>
+         </div>
+      </section>
+  
+  <!-- blog card -->
+    <section class="blog-card">
+        <div class="row blog">
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                     <img  class="card-img-top" src="https://i.postimg.cc/2y6wbZCm/news1.jpg" alt="">
+                     <h6> 12 February 2025</h6>
+                     <h4 style="text-decoration: wavy;">    What Curling Irons Are The Best Ones</h4>
+                     <a style="text-decoration: none; color: red;" href="https://www.vogue.com/article/best-curling-iron">read me!</a>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="https://i.postimg.cc/x1KKdRLM/news3.jpg" alt="">
+                                          <h6> 12 april 2025</h6>
+                     <h4  style="text-decoration: wavy;" >  Eternity Bands Do Last Forever</h4>
+                     <a style="text-decoration: none; color: red;" href="https://www.vogue.com/article/best-curling-iron">read me!</a>
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="https://i.postimg.cc/9MXPK7RT/news2.jpg" alt="">
+                                          <h6> 12 march 2025</h6>
+                     <h4  style="text-decoration: wavy;" >  The Health Benefits Of Sunglasses</h4>
+                     <a style="text-decoration: none; color: red;" href="https://www.rivieraopticare.com/blog/314864-the-health-benefits-of-wearing-sunglasses_2/">read me!</a>
+              </div>
+          </div>
+         </div>
+    </section>
+ 
+
+
+
+  <!-- location -->
+   <div class="map-container" style="margin: 40px auto; text-align: center;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d112121.29643145247!2d76.96084411927541!3d28.57605265424907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1samezone!5e0!3m2!1sen!2sin!4v1751528903030!5m2!1sen!2sin" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+
+
+   <!-- information -->
+   <section id="Contact">
+    <div class="container information mt-5" >
+  <div class="row">
+    <div class="col-md-6">
+      <h6 style="color: red;">INFORMATION</h6>
+      <h1>Contact Us</h1>
+      <p>As you might expect of a company that began as a high-end interiors contractor,<br> we pay strict attention.</p>
+      <h2>USA</h2>
+      <p>195 E Parker Square Dr, Parker, CO 801+43 982-314-0958</p>
+      <h2>India</h2>
+      <p>HW95+C9C, Lorem ipsum dolor sit.411014</p>
+    </div>
+
+
+           <div class="col-md-6">
+             <div class="container mt-5">
+               <form>
+                 <div class="row mb-3">
+                 <div class="col-md-6">
+                 <input type="text" class="form-control custom-input" placeholder="Name">
+             </div>
+               <div class="col-md-6">
+               <input type="email" class="form-control custom-input" placeholder="Email">
+             </div>
+           </div>
+       
+           <div class="mb-3">
+             <textarea class="form-control custom-textarea" rows="5" placeholder="Message"></textarea>
+           </div>
+       
+           <button type="submit" class="btn custom-btn">SEND MESSAGE</button>
+         </form>
+       </div>
+    </div>
+  </div>
+</div>
+   </section>
+
+  <!-- footer -->
+      <footer class="footer bg-dark text-white py-3 my-4">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Shop</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Content</a></li>
+        </ul>
+        <p class="text-center mb-0">© 2025 Company, Inc</p>
+      </footer>
+
+
+
+
+  <script src="type.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

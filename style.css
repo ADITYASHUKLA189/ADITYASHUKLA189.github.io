@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  padding-top: 55px; /* Space for fixed navbar */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* Adjust this value to match your navbar height */
+}
+
+
+/* Navbar */
+#navbar {
+  background-color: #9e9e9e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Background Section */
+.bg-image {
+  background-image: url('https://i.postimg.cc/t403yfn9/home2.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+}
+
+/* Content Styling */
+.home_content {
+  padding: 50px;
+}
+
+.heading {
+  padding-top: 30px;
+}
+
+.home_label {
+  padding-top: 10px;
+  color: rgb(150, 148, 148);
+}
+
+/* Button Styling */
+.btn {
+  border: 2px solid black;
+  color: white;
+  border-radius: 1px;
+  background: #000;
+  width: 150px;
+  height: 50px;
+}
+
+.btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Social Icons */
+.home_social_icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.home_social_icons a {
+  font-size: 24px;
+  color: #000;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.home_social_icons a:hover {
+  color: #ff4081;
+}
+
+/*  logo spacing */
+#navimg {
+  margin-left: 20px;
+}
+
+/* collection section */
+.collection{
+  margin-top: 50px;
+  margin-left: 135px;
+  display: flex;
+}
+
+
+.collection .container .card{
+         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+         transition: 600ms;
+         position: relative;
+         overflow: hidden;
+
+}
+
+.collection .container .card:hover{
+         transform: scale(1.1);
+         
+}
+
+.collection .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 200ms;
+  flex-direction: column;
+  
+}
+
+.collection .card{
+  height: 300px;
+  width: 300px;
+  
+}
+
+.collection .card .img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.collection .card .overlay:hover{
+  opacity: 1;
+}
+
+
+
+
+/* shop section */
+.shop{
+  margin: 90px;
+}
+
+.shop .card{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+}
+
+
+/* top sales cards */
+.fixed-img {
+  height: 200px;       
+  object-fit: contain;   
+  width: 100%;        
+  
+}
+
+
+
+
+/* -------------------------blog section -------------------------------------- */
+.blog-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-card .card-img-top {
+  height: 200px;         
+  object-fit: cover;     
+}
+
+.blog-card .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+/* information */
+.information{
+  display: flex;
+  
+}
